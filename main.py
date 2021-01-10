@@ -1,7 +1,4 @@
 # pylint: disable=no-member disable=import-error disable=no-name-in-module
-
-import json
-
 from provider import ArchiveOrg
 
 from pathlib import Path
