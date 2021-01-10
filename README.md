@@ -2,7 +2,7 @@
 
 Browse and download roms on your Nintendo Switch
 
-<img src="https://github.com/mklan/NX-Rom-Market/raw/main/inapp.gif" width="250" />
+<img src="https://github.com/mklan/NX-Rom-Market/raw/main/inapp.gif" width="400" />
 
 ## Providers
 
