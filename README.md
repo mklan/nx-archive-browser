@@ -18,7 +18,7 @@ PRs for new providers + a provider-manager are appreciated
 
 Example:
 
-```
+```Json
 {
   "N64": "SomeRomCollectionByGhostw***",
   "SNES": "SomeOtherCollectionByGhostw***"
