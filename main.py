@@ -31,11 +31,17 @@ def colorToFloat(t):
     return nt
 
 
-# (r, g, b)
-FOLDER_COLOR = colorToFloat((216, 153, 33))  # yellow
-PYFILE_COLOR = colorToFloat((46, 204, 113))
-FILE_COLOR = colorToFloat((104, 157, 106))  # green
-APP_COLOR = colorToFloat((24, 86, 31))
+def hexToFloat(h):
+    rgb = tuple(int(h[i:i+2], 16) for i in (0, 2, 4))
+    return colorToFloat(rgb)
+
+
+COLLECTION_COLOR = hexToFloat('1d1d1d')  # gray
+ROM_COLOR = hexToFloat('1d1d1d')  # gray
+ROM_COLOR_DOWNLOADED = hexToFloat('A17723')  # yellow
+MENU_BUTTON_COLOR = hexToFloat('367588')  # blue
+MENU_BUTTON_COLOR_SELECTED = hexToFloat('A17723')  # yellow
+TEXT_COLOR = hexToFloat('e2e2e2')  # light gray
 
 ERROR = ""
 
@@ -164,8 +170,10 @@ def rom_list(collections, console_selected, prefix='A', checkbox_extract=False):
 
         imgui.begin_group()
 
+        imgui.push_style_color(imgui.COLOR_BUTTON, *MENU_BUTTON_COLOR_SELECTED)
         if imgui.button("< Back", width=70, height=50):
             main(collections)
+        imgui.pop_style_color(1)
 
         imgui.same_line(spacing=50)
         _, checkbox_extract = imgui.checkbox(
@@ -177,7 +185,7 @@ def rom_list(collections, console_selected, prefix='A', checkbox_extract=False):
 
         for letter in '#'+string.ascii_uppercase:
 
-            button_color = FOLDER_COLOR if prefix == letter else FILE_COLOR
+            button_color = MENU_BUTTON_COLOR_SELECTED if prefix == letter else MENU_BUTTON_COLOR
 
             imgui.same_line()
             imgui.push_style_color(imgui.COLOR_BUTTON, *button_color)
@@ -193,22 +201,13 @@ def rom_list(collections, console_selected, prefix='A', checkbox_extract=False):
             folder_name = os.path.splitext(rom['title'])[0]
             is_downloaded = any(x in dir_content for x in [
                 rom['title'], folder_name])
-            button_color = FILE_COLOR if is_downloaded else FOLDER_COLOR
+            button_color = ROM_COLOR_DOWNLOADED if is_downloaded else ROM_COLOR
             imgui.push_style_color(imgui.COLOR_BUTTON, *button_color)
             if imgui.button(rom['title']+"  "+rom['size'], width=1240, height=30):
                 start(rom, console_selected, checkbox_extract)
             imgui.pop_style_color(1)
 
         imgui.end_child()
-
-        imgui.end_group()
-
-        imgui.same_line(spacing=50)
-        imgui.begin_group()
-
-        imgui.push_style_color(imgui.COLOR_BUTTON, *APP_COLOR)
-
-        imgui.pop_style_color(1)
 
         imgui.end_group()
 
@@ -236,6 +235,10 @@ def main(collections):
         imgui.begin("",
                     flags=imgui.WINDOW_NO_TITLE_BAR | imgui.WINDOW_NO_RESIZE | imgui.WINDOW_NO_MOVE | imgui.WINDOW_NO_SAVED_SETTINGS
                     )
+
+        imgui.push_style_color(imgui.COLOR_TEXT, *TEXT_COLOR)
+        imgui.push_style_color(imgui.COLOR_BUTTON_HOVERED, *MENU_BUTTON_COLOR)
+        imgui.push_style_color(imgui.COLOR_BUTTON_ACTIVE, *MENU_BUTTON_COLOR)
         imgui.begin_group()
 
         imgui.text("NX-Rom-Market")
@@ -253,7 +256,7 @@ def main(collections):
 
             idx % 3 == 0 and imgui.new_line() or imgui.same_line()
 
-            imgui.push_style_color(imgui.COLOR_BUTTON, *FOLDER_COLOR)
+            imgui.push_style_color(imgui.COLOR_BUTTON, *COLLECTION_COLOR)
             if imgui.button(collectionName, width=390, height=150):
                 rom_list(collections, collectionName)
             imgui.pop_style_color(1)
