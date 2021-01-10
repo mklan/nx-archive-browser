@@ -2,6 +2,8 @@
 
 Browse and download roms on your Nintendo Switch
 
+![In App Screenshots](https://github.com/mklan/NX-Rom-Market/blob/master/inapp.gif)
+
 ## Providers
 
 currently only https://archive.org is available.
@@ -12,7 +14,7 @@ PRs for new providers + a provider-manager are appreciated
 
 1. Copy the content of the ZIP archive of a release into the /switch folder on your SD card. NX-Rom-Market will appear on the Homebrew Menu.
 
-2. Enhance `collections.json` inside the NX-Rom-Market folder with your desired rom collections. The keys represent rom folders inside `sdmc:/roms/` the values are archive.org identifier of rom collections.
+2. Configure your rom collections in `collections.json`. The keys represent rom folders inside `sdmc:/roms/` the values are archive.org identifier of rom collections.
 
 Example:
 
@@ -23,13 +25,13 @@ Example:
 }
 ```
 
-This config will let you browse the archive collections. Roms will be downloaded inside `sdmc:/roms/N64` and `sdmc:/roms/SNES`
+The Roms will be downloaded to `sdmc:/roms/N64` and `sdmc:/roms/SNES`.
 
 Read the [legal terms](https://archive.org/about/terms.php) of archive.org. I would encourage you to only download games you own a physical copy of.
 
 ## Limitations
 
-- No SSL! PyNX does not support ssl so keep in mind that you are downloading via an unencrypted connection. Ideally use a VPN. Altough archive.org seems to redirect downlaod requests to some external storage bucket, so it could be a different scenario (please correct me if I am wrong)
+- No SSL! PyNX does not support ssl so keep in mind that you are downloading via an unencrypted connection. Ideally use a VPN. Although archive.org seems to redirect downlaod requests to some external storage bucket, so it could be a different scenario (please correct me if I am wrong)
 
 - You cannot go back to Homebrew Menu. You have to press the Home button to close the app
 
@@ -45,7 +47,7 @@ Read the [legal terms](https://archive.org/about/terms.php) of archive.org. I wo
 
 [NX-RomGet](https://github.com/hotshotz79/NX-RomGet) - Download / Extract script
 
-## Backlog (pr appreciated)
+## Backlog
 
 - [ ] download-queue
 - [ ] cancel downloads
