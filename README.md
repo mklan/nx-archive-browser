@@ -27,11 +27,11 @@ Example:
 
 The Roms will be downloaded to `sdmc:/roms/N64` and `sdmc:/roms/SNES`.
 
-Read the [legal terms](https://archive.org/about/terms.php) of archive.org. I would encourage you to only download games you own a physical copy of.
+Read the [legal terms](https://archive.org/about/terms.php) of archive.org. I would encourage you to only download games you developed on your own or in some cases own a copy of the original product (depends where you are located). 
 
 ## Limitations
 
-- No SSL! PyNX does not support ssl so keep in mind that you are downloading via an unencrypted connection. Ideally use a VPN. Although archive.org seems to redirect downlaod requests to some external storage bucket, so it could be a different scenario (please correct me if I am wrong)
+- No SSL! PyNX does not support ssl so keep in mind that you are downloading via an unencrypted connection. Ideally use a VPN. Although archive.org seems to redirect download requests to some external bucket, so it could be a different scenario (please correct me if I am wrong)
 
 - You cannot go back to Homebrew Menu. You have to press the Home button to close the app
 
