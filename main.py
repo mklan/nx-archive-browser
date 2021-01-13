@@ -64,7 +64,7 @@ def report_hook(count, block_size, total_size):
 
 
 # source: https://github.com/hotshotz79/NX-RomGet
-def start(rom, consolefolder, extract):
+def download(rom, consolefolder, extract):
     # clear both buffers
     imguihelper.clear()
     _nx.gfx_set_mode(TILED_DOUBLE)
@@ -201,7 +201,7 @@ def rom_list(collections, console_selected, prefix='A', checkbox_extract=False):
             button_color = ROM_COLOR_DOWNLOADED if is_downloaded else ROM_COLOR
             imgui.push_style_color(imgui.COLOR_BUTTON, *button_color)
             if imgui.button(rom['title']+"  "+rom['size'], width=1240, height=30):
-                start(rom, console_selected, checkbox_extract)
+                download(rom, console_selected, checkbox_extract)
             imgui.pop_style_color(1)
 
         imgui.end_child()
@@ -281,8 +281,7 @@ def main(collections):
 
 if __name__ == "__main__":
 
-    # hacky way to load collections and display errors in a weird way.
-    # I am sure the exception handling could be done better
+    # TODO: better exception error handling
     try:
         try:
             with open('collections.json') as json_file:
