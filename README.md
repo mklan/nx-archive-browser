@@ -2,7 +2,7 @@
 
 Browse and download roms on your Nintendo Switch
 
-> :warning: **This App does not provide any roms! Sources need to be added manually**
+> :exclamation: **NX-Rom-Market does not provide any download links for roms! The developers are not responsible for any possible user configuration**
 
 <img src="https://github.com/mklan/NX-Rom-Market/raw/main/inapp.gif" width="600" />
 
