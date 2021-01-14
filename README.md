@@ -39,6 +39,8 @@ Read the [legal terms](https://archive.org/about/terms.php) of archive.org. I wo
 
 - You can currently only download one rom at a time. Also the download will block the ui thread, so you cannot continue browsing. I tried threading, but it crashed (PR pls!).
 
+- Archive.org download speed ~ 300 kb/s
+
 ## Known Bugs
 
 - no zip extraction info is being displayed. Just wait until the script returns to the list again.
