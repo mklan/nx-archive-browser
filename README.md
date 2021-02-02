@@ -41,6 +41,8 @@ Read the [legal terms](https://archive.org/about/terms.php) of archive.org. I wo
 
 - Archive.org download speed ~ 300 kb/s
 
+- No download of restricted links (Archive.org login required)
+
 ## Known Bugs
 
 - no zip extraction info is being displayed. Just wait until the script returns to the list again.
@@ -61,6 +63,7 @@ Read the [legal terms](https://archive.org/about/terms.php) of archive.org. I wo
 - [ ] manage providers
 - [ ] metadata [in-game screenshot, description]
 - [ ] loading collection indicator
+- [ ] login to archive.org for restricted collections
 
 ## LICENSE
 
