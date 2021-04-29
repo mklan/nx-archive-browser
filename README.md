@@ -1,6 +1,9 @@
 # NX-Rom-Market
 
+
 Browse and download roms on your Nintendo Switch
+
+> :exclamation: **Discontinued!!!! Crashes on newer firmwares! https://github.com/mklan/NX-Rom-Market/issues/3**
 
 > :exclamation: **NX-Rom-Market does not provide any download links for roms! The developers are not responsible for any possible user configuration**
 
