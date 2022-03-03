@@ -3,7 +3,7 @@
 
 Browse and download roms on your Nintendo Switch
 
-> :exclamation: **Discontinued!!!! Crashes on newer firmwares! https://github.com/mklan/NX-Rom-Market/issues/3**
+> :exclamation: **Discontinued!!!! Crashes on newer firmwares! See [PyNX Issue 20](https://github.com/nx-python/PyNX/issues/20)**
 
 > :exclamation: **NX-Rom-Market does not provide any download links for roms! The developers are not responsible for any possible user configuration**
 
@@ -17,7 +17,7 @@ PRs for new providers + a provider-manager are appreciated
 
 ## Install
 
-1. Copy the content of the ZIP archive of a release into the /switch folder on your SD card. NX-Rom-Market will appear on the Homebrew Menu.
+1. Copy the content of the ZIP archive of a release into the `/switch` folder on your SD card. NX-Rom-Market will appear on the Homebrew Menu.
 
 2. Configure your rom collections in `collections.json`. The keys represent rom folders inside `sdmc:/roms/` the values are archive.org identifier of rom collections.
 
