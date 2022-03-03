@@ -3,7 +3,7 @@
 
 Browse and download roms on your Nintendo Switch
 
-> :exclamation: **Discontinued!!!! Crashes on newer firmwares! See [PyNX Issue 20](https://github.com/nx-python/PyNX/issues/20)**
+> :exclamation: **Discontinued!!!! Crashes on firmwares >= 12.0.0! See [PyNX Issue 20](https://github.com/nx-python/PyNX/issues/20)**
 
 > :exclamation: **NX-Rom-Market does not provide any download links for roms! The developers are not responsible for any possible user configuration**
 
