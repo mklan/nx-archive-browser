@@ -5,7 +5,9 @@ Browse and download roms on your Nintendo Switch
 
 > :exclamation: **Discontinued!!!! Crashes on firmwares >= 12.0.0! See [PyNX Issue 20](https://github.com/nx-python/PyNX/issues/20)**
 
-> :exclamation: **NX-Rom-Market does not provide any download links for roms! The developers are not responsible for any possible user configuration**
+> 🥳 **This project will be rewritten in rust, once proper bindings are available! See [PR 88991](https://github.com/rust-lang/rust/pull/88991)**
+
+> :exclamation: **NX-Rom-Market does not provide any download links for roms! The author is not responsible for any possible user configuration**
 
 <img src="https://github.com/mklan/NX-Rom-Market/raw/main/inapp.gif" width="600" />
 
