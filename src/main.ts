@@ -226,7 +226,7 @@ function render() {
   if (currentMenu!.getId() === "collection") {
     console.log(
       screen.spread3({
-        left: { text: `L   ${mainMenu!.getPrev().title}`, color: white },
+        left: { text: ` L   ${mainMenu!.getPrev().title}`, color: white },
         center: { text: currentCollection!, color: cyan },
         right: { text: `${mainMenu!.getNext().title}   R `, color: white },
       })
