@@ -2,6 +2,8 @@
 
 Browse and download archives from archive.org on your Nintendo Switch
 
+<img src="https://github.com/mklan/NX-Rom-Market/raw/main/screenshot.jpg" width="600" />
+
 
 ## Install
 
