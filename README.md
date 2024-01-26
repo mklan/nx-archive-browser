@@ -2,12 +2,12 @@
 
 Browse and download archives from archive.org on your Nintendo Switch
 
-<img src="https://github.com/mklan/NX-Rom-Market/raw/main/screenshot.jpg" width="600" />
+<img src="https://github.com/mklan/NX-Rom-Market/raw/main/screenshot.jpg" width="800" />
 
 
 ## Install
 
-1. copy the nx-archive-browser.nro into the `/switch` folder on your SD card. The app will appear on the Homebrew Menu.
+1. Copy `nx-archive-browser.nro` to `/switch`. The app will appear on the Homebrew Menu.
 
 2. Configure your archive collections and root download folder in `config/nx-archive-browser/config.json`.
 The keys represent collection folders inside your download folder. The values are archive.org identifier of collections.
