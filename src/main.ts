@@ -30,7 +30,7 @@ const screen = createScreen(80, 43);
 
 const header = screen.spread3({
   left: { text: "", color: white },
-  center: { text: "nx-archive-browser v0.1.0", color: yellow },
+  center: { text: "nx-archive-browser v0.1.1", color: yellow },
   right: { text: "+ Exit ", color: white },
 });
 
@@ -119,6 +119,8 @@ async function main() {
       if (key === "X") {
         if (currentMenu!.getId() === "collection") {
           const item = currentMenu!.getSelected();
+          if (!item.marked) return;
+
           remove(item.meta.collection.title, item.meta.fileName);
           item.marked = false;
         }
