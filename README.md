@@ -1,68 +1,49 @@
-# NX-Rom-Market
+# nx-archive-browser
 
-Browse and download roms on your Nintendo Switch
+Browse and download archives from archive.org on your Nintendo Switch
 
-<img src="https://github.com/mklan/NX-Rom-Market/raw/main/inapp.gif" width="600" />
-
-## Providers
-
-currently only https://archive.org is available.
-
-PRs for new providers + a provider-manager are appreciated
 
 ## Install
 
-1. Copy the content of the ZIP archive of a release into the /switch folder on your SD card. NX-Rom-Market will appear on the Homebrew Menu.
+1. copy the nx-archive-browser.nro into the `/switch` folder on your SD card. The app will appear on the Homebrew Menu.
 
-2. Configure your rom collections in `collections.json`. The keys represent rom folders inside `sdmc:/roms/` the values are archive.org identifier of rom collections.
+2. Configure your archive collections and root download folder in `config/nx-archive-browser/config.json`.
+The keys represent collection folders inside your download folder. The values are archive.org identifier of collections.
 
 Example:
 
 ```Json
 {
-  "N64": "SomeRomCollectionByGhostw***",
-  "SNES": "SomeOtherCollectionByGhostw***"
+  "folder": "roms",
+  "collections": {
+    "N64": "SomeCollectionByGhostw***",
+    "SNES": "SomeOtherCollectionByGhostw***"
+  }
 }
 ```
 
-The Roms will be downloaded to `sdmc:/roms/N64` and `sdmc:/roms/SNES`.
+The archives will be downloaded to `sdmc:/roms/N64` and `sdmc:/roms/SNES`.
 
 Read the [legal terms](https://archive.org/about/terms.php) of archive.org. I would encourage you to only download games you own a physical copy of.
 
-## Limitations
-
-- No SSL! PyNX does not support ssl so keep in mind that you are downloading via an unencrypted connection. Ideally use a VPN. Although archive.org seems to redirect downlaod requests to some external storage bucket, so it could be a different scenario (please correct me if I am wrong)
-
-- You cannot go back to Homebrew Menu. You have to press the Home button to close the app
-
-- You can currently only download one rom at a time. Also the download will block the ui thread, so you cannot continue browsing. I tried threading, but it crashed (PR pls!).
-
-## Known Bugs
-
-- no zip extraction info is being displayed. Just wait until the script returns to the list again.
-
 ## Credits
 
-[PyNX](https://github.com/nx-python/PyNX) - Python ecosystem for the Switch
+[TooTallNate - nxjs](https://github.com/TooTallNate/nx.js) - JS runtime for the Switch
 
-[NX-RomGet](https://github.com/hotshotz79/NX-RomGet) - Download / Extract script
 
-## Backlog
+## Possible TODOs
 
-- [ ] download-queue
 - [ ] cancel downloads
-- [ ] delete roms
 - [ ] search
 - [ ] external meta-lists [top, popular]
-- [ ] manage providers
 - [ ] metadata [in-game screenshot, description]
-- [ ] loading collection indicator
+- [ ] unzip
 
 ## LICENSE
 
 MIT License
 
-Copyright (c) 2021 Matthias Klan
+Copyright (c) 2021 - 2024 Matthias Klan
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

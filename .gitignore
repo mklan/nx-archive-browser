@@ -1,8 +1,4 @@
-tools/
-upload.sh
-update.nro.sh
-mycollections.json
-dist
-
-provider/__pycache__/
-*.py[cod]
+/*.nro
+/node_modules
+/romfs/main.js
+/romfs/main.js.map

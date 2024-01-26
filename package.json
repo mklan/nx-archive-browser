@@ -1,0 +1,27 @@
+{
+  "titleId": "01ee9aec91da0000",
+  "name": "nx-archive-browser",
+  "version": "0.1.0",
+  "private": true,
+  "description": "",
+  "author": {
+    "name": "mklan"
+  },
+  "scripts": {
+    "build": "esbuild --bundle --sourcemap --sources-content=false --target=es2022 --format=esm src/main.ts --outfile=romfs/main.js",
+    "nro": "nxjs-pack",
+    "copy": "curl -T nx-archive-browser.nro ftp://192.168.1.46:5000/switch/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.17.19",
+    "nxjs-pack": "^0.0.28",
+    "nxjs-runtime": "^0.0.30"
+  },
+  "dependencies": {
+    "kleur": "^4.1.5",
+    "linkedom": "^0.16.6",
+    "nxjs-constants": "^0.0.27",
+    "sisteransi": "^1.0.5"
+  }
+}
