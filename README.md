@@ -24,7 +24,7 @@ Example:
 
 The archives will be downloaded to `sdmc:/roms/N64` and `sdmc:/roms/SNES`.
 
-Read the [legal terms](https://archive.org/about/terms.php) of archive.org. I would encourage you to only download games you own a physical copy of.
+Read the [legal terms](https://archive.org/about/terms.php) of archive.org. I would encourage you to only download games you developed on your own or in some cases own a copy of the original product (depends where you are located). 
 
 ## Credits
 
