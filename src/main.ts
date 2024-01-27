@@ -30,7 +30,7 @@ const screen = createScreen(80, 43);
 
 const header = screen.spread3({
   left: { text: "", color: white },
-  center: { text: "nx-archive-browser v0.1.1", color: yellow },
+  center: { text: "nx-archive-browser v0.1.2", color: yellow },
   right: { text: "+ Exit ", color: white },
 });
 

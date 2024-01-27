@@ -1,7 +1,7 @@
 {
   "titleId": "01ee9aec91da0000",
   "name": "nx-archive-browser",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "description": "",
   "author": {
@@ -15,8 +15,8 @@
   "license": "MIT",
   "devDependencies": {
     "esbuild": "^0.17.19",
-    "nxjs-pack": "^0.0.28",
-    "nxjs-runtime": "^0.0.30"
+    "nxjs-pack": "^0.0.32",
+    "nxjs-runtime": "^0.0.32"
   },
   "dependencies": {
     "kleur": "^4.1.5",
