@@ -30,7 +30,7 @@ const screen = createScreen(80, 43);
 
 const header = screen.spread3({
   left: { text: "", color: white },
-  center: { text: "nx-archive-browser v0.1.2", color: yellow },
+  center: { text: "nx-archive-browser v0.1.3", color: yellow },
   right: { text: "+ Exit ", color: white },
 });
 
@@ -113,7 +113,7 @@ async function main() {
         currentMenu = mainMenu!;
       }
       if (key === "Y") {
-        localStorage && localStorage.clear();
+        localStorage.clear();
         notification.show(2000, "cache cleared!");
       }
       if (key === "X") {
@@ -191,10 +191,10 @@ async function enterCollection(collection: Collection, onExit: () => void) {
 
   const titles = entries.map((entry) => ({
     meta: {
-      fileName: entry.fileName,
+      fileName: entry.title,
       collection,
     },
-    marked: localFiles.includes(entry.fileName),
+    marked: localFiles.includes(entry.title),
     title: entry.title.slice(0, 79),
   }));
 
